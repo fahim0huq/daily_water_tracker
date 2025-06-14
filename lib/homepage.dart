@@ -39,7 +39,7 @@ class _HomepageState extends State<Homepage> {
           style: TextStyle(
             color: Colors.white,
             fontWeight: FontWeight.w700,
-            fontSize: 24.5,
+            fontSize: 17,
           ),
         ),
       ),
@@ -49,19 +49,19 @@ class _HomepageState extends State<Homepage> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              const SizedBox(height: 30),
+              const SizedBox(height:15),
               const Text(
                 "Today's Intake",
                 style: TextStyle(
-                  fontSize: 27,
+                  fontSize: 21,
                   fontWeight: FontWeight.bold,
                   color: Colors.redAccent,
                 ),
               ),
-              const SizedBox(height: 12),
+              const SizedBox(height: 15),
               Container(
                 padding: const EdgeInsets.all(12),
-                height: 70,
+                height: 60,
                 width: 140,
                 decoration: BoxDecoration(
                   gradient: LinearGradient(
@@ -86,19 +86,19 @@ class _HomepageState extends State<Homepage> {
                     style: TextStyle(
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
-                      fontSize: 20,
-                      letterSpacing: 1.2,
+                      fontSize: 17,
+                      //letterSpacing: 1.2,
                     ),
                   ),
                 ),
               ),
-              const SizedBox(height: 40),
+              const SizedBox(height: 35),
               Stack(
                 alignment: Alignment.center,
                 children: [
                   SizedBox(
-                    height: 160,
-                    width: 160,
+                    height: 150,
+                    width: 150,
                     child: GradientCircularProgress(progress: progress,),
                   ),
                    Text(
@@ -111,10 +111,10 @@ class _HomepageState extends State<Homepage> {
                   ),
                 ],
               ),
-              const SizedBox(height: 50),
+              const SizedBox(height: 35),
               Wrap(
-                spacing: 20,
-                runSpacing: 20,
+                spacing: 15,
+                runSpacing: 10,
                 alignment: WrapAlignment.center,
                 children: [
                   WaterBtn(amount: 200, onClick: ()=>addWater(200),),
@@ -123,9 +123,9 @@ class _HomepageState extends State<Homepage> {
 
                 ],
               ),
-              SizedBox(height: 40,),
+              SizedBox(height: 15,),
               Container(
-                height: 70,
+                height: 60,
                 width: 320,
                 padding: const EdgeInsets.all(12),
                 decoration: BoxDecoration(
@@ -154,7 +154,7 @@ class _HomepageState extends State<Homepage> {
                     style: const TextStyle(
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
-                      fontSize: 17,
+                      fontSize: 11,
                     ),
                     cursorColor: Colors.white,
                     decoration: InputDecoration(
@@ -163,11 +163,12 @@ class _HomepageState extends State<Homepage> {
                       labelStyle: const TextStyle(
                         color: Colors.white70,
                         fontWeight: FontWeight.w500,
-                        fontSize: 16,
+                        fontSize: 10,
                       ),
                       icon: const Icon(Icons.water_drop, color: Colors.white),
                       suffixIcon: IconButton(
-                        icon: const Icon(Icons.add, size: 40, color: Colors.white),
+                        alignment: Alignment.centerRight,
+                        icon: const Icon(Icons.add, color: Colors.white),
                         onPressed: () {
                           final input = int.tryParse(waterController.text);
                           addWater(input!);
@@ -180,7 +181,7 @@ class _HomepageState extends State<Homepage> {
                 ),
               ),
 
-              SizedBox(height: 20,),
+              SizedBox(height: 15,),
 
               Material(
                 color: Colors.transparent,
@@ -191,7 +192,7 @@ class _HomepageState extends State<Homepage> {
                   },
                 child: Container(
                   padding: const EdgeInsets.all(12),
-                  height: 70,
+                  height: 60,
                   width: 320,
                   decoration: BoxDecoration(
                     gradient: LinearGradient(
@@ -214,8 +215,8 @@ class _HomepageState extends State<Homepage> {
                       style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
-                        fontSize: 20,
-                        letterSpacing: 1.2,
+                        fontSize: 17,
+                        //letterSpacing: 1.2,
                       ),
                     ),
                   ),

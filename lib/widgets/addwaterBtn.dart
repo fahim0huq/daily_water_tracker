@@ -37,18 +37,18 @@ class WaterBtn extends StatelessWidget {
         child: Row(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Icon(Icons.opacity_rounded, size: 11, color: Colors.white),
+            Icon(Icons.opacity_rounded, size: 15, color: Colors.white),
             const SizedBox(width: 3),
             Text(
               "${amount}",
               style: TextStyle(
-                fontSize: 13,
+                fontSize: 10,
                 fontWeight: FontWeight.w900,
                 color: Colors.white,
               ),
             ),
             const SizedBox(width: 3),
-            Icon(icon ?? Icons.add_circle_outline, size: 23, color: Colors.white),
+            Icon(icon ?? Icons.add_circle_outline, size: 17, color: Colors.white),
           ],
         ),
       ),
